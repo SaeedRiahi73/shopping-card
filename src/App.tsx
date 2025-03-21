@@ -32,7 +32,7 @@ function App() {
       <div>slider one</div>
       <div>slider two</div>
       <div>slider three</div>
-      <footer>footer</footer>
+      <footer>change footer</footer>
     </>
   );
 }
