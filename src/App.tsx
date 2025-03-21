@@ -31,6 +31,7 @@ function App() {
       <header>header</header>
       <div>slider one</div>
       <div>slider two</div>
+      <footer>footer</footer>
     </>
   );
 }
