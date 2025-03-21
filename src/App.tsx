@@ -36,7 +36,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <header>header</header>
-      <div>slider one</div>
+      <div>slider </div>
       <div>slider two</div>
       <div>slider three</div>
       <footer>change footer</footer>
