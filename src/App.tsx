@@ -28,6 +28,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <header>header</header>
       <div>slider one</div>
       <div>slider two</div>
     </>
