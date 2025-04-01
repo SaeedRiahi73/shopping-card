@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 
 const MainLayout: React.FC = () => {
@@ -11,7 +12,7 @@ const MainLayout: React.FC = () => {
           dir="rtl"
           className="max-w-screen-xl mt-[69px] lg:px-4 mx-auto dark:text-white"
         >
-          body
+          <Outlet />
         </div>
         <div>footer</div>
       </div>
