@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 import { FaHome } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -8,6 +9,9 @@ const Navbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });
+
+  const context = useContext(cartContext);
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -85,12 +89,17 @@ const Navbar: React.FC = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex flex-row items-center gap-2 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                <FaShoppingCart /> سبد خرید
-              </a>
+              <div className="relative">
+                <a
+                  href="#"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  <FaShoppingCart /> سبد خرید
+                </a>
+                <div className="absolute px-2 rounded-full bg-red-600 text-white -top-3 -right-7 text-sm">
+                  {context?.items.length}
+                </div>
+              </div>
             </li>
             <li>
               <a
