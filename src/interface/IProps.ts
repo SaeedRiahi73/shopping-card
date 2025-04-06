@@ -1,5 +1,5 @@
-import { product } from "../types/type";
+import { Product } from "../types/type";
 
 export interface IPropsCard {
-    product: product
+    product: Product
 }
